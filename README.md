@@ -8,10 +8,13 @@ modulo-3-actividad-3/
     ├── src/
     │   ├── main/
     │   │   └── java/cl/kibernumacademy/
-    |   |               ├── modelo/Producto.java         # Modelo de producto
-    |   |               └── util/ProductManager.java     # Lógica
+    │   │       ├── modelo/
+    │   │       │   └── Producto.java         # Modelo de producto
+    │   │       └── util/
+    │   │           └── ProductManager.java   # Lógica de negocio
     │   └── test/
     │       └── java/cl/kibernumacademy/
-    |                   ├── modelo/
-    |                   └── util/ProductManagerTest.java # Pruebas unitarias
+    │           ├── modelo/
+    │           └── util/
+    │               └── ProductManagerTest.java # Pruebas unitarias
     └── pom.xml
