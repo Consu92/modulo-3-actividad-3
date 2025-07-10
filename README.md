@@ -1,6 +1,7 @@
 # modulo-3-actividad-3
 
 # Estructura del proyecto
+```bash
 modulo-3-actividad-3/
 ├── .gitignore
 ├── README.md
@@ -18,3 +19,4 @@ modulo-3-actividad-3/
     │           └── util/
     │               └── ProductManagerTest.java # Pruebas unitarias
     └── pom.xml
+```
