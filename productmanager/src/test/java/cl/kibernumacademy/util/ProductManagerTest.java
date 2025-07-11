@@ -1,18 +1,13 @@
 package cl.kibernumacademy.util;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import java.util.List;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -40,7 +35,6 @@ public class ProductManagerTest {
     assertEquals(1200.0, product.getPrice(), 0.001);
     assertNotNull(product.getId());
 
-    // Verificamos que el producto se haya agregado
     List<Product> allProducts = manager.getAllProducts();
     assertTrue(allProducts.contains(product));
   }
@@ -98,7 +92,6 @@ public class ProductManagerTest {
 
     List<Product> allProducts = manager.getAllProducts();
 
-    // Usando Hamcrest
     assertThat(allProducts, hasSize(2));
     assertThat(allProducts, hasItems(product1, product2));
     assertThat(allProducts, everyItem(hasProperty("price", greaterThanOrEqualTo(0.0))));

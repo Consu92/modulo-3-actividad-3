@@ -36,7 +36,7 @@ public class ProductManager {
         return p;
       }
     }
-    return null; // Si no se encuentra el producto
+    return null;
   }
 
   public List<Product> getAllProducts() {
